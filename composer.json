@@ -1,0 +1,49 @@
+{
+    "name": "veiliglanceren/laravel-remote-documentation",
+    "description": "Easily fetch, parse, and display remote Markdown documentation from GitHub (or other sources) directly into customizable Blade views in your Laravel application.",
+    "type": "library",
+    "version": "0.0.1",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0|^12.0",
+        "league/commonmark": "^2.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Veiliglanceren\\LaravelRemoteDocumentation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Niels Hamelink",
+            "email": "niels@veiliglanceren.nl"
+        }
+    ],
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Veiliglanceren\\LaravelRemoteDocumentation\\DocumentationServiceProvider"
+            ],
+            "aliases": {
+                "RemoteDocumentation": "Veiliglanceren\\LaravelRemoteDocumentation\\Facades\\RemoteDocumentation"
+            }
+        }
+    }
+}

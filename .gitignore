@@ -1,0 +1,33 @@
+# Laravel & PHP
+/vendor
+/node_modules
+/storage/*.key
+/.env
+/.env.testing
+/.phpunit.result.cache
+
+# IDEs and editors
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Composer & npm
+composer.lock
+package-lock.json
+yarn.lock
+
+# Coverage / Testing
+coverage/
+.phpunit.cache/
+.pest.cache/
+
+# Logs
+/storage/logs/*.log
+
+# Custom
+resources/views/vendor/remote-documentation/*.blade.php
