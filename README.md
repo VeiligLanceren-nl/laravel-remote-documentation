@@ -88,6 +88,15 @@ Run the tests using PestPHP:
 ./vendor/bin/pest
 ```
 
+### 🧪 Pest Compatibility
+
+This package supports:
+
+- Pest v2 (for Laravel 10)
+- Pest v3 (for Laravel 11 and 12)
+
+Ensure that your Pest version aligns with your Laravel version to maintain compatibility.
+
 ---
 
 ## 📚 Future Roadmap
