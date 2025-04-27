@@ -1,3 +1,6 @@
+![Veilig Lanceren](/veilig-lanceren-logo.png)
+
+This package is maintained by [VeiligLanceren.nl](https://veiliglanceren.nl), your partner in website development and everything else to power up your online company.
 
 # Laravel Remote Documentation
 
@@ -110,12 +113,5 @@ Ensure that your Pest version aligns with your Laravel version to maintain compa
 
 The MIT License (MIT).  
 Please see [License File](LICENSE) for more information.
-
----
-
-## 👨‍💻 About
-
-Developed by [VeiligLanceren](https://veiliglanceren.nl) —  
-Secure and professional Laravel development.
 
 ---
