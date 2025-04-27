@@ -7,6 +7,7 @@ use Veiliglanceren\LaravelRemoteDocumentation\Interfaces\Services\IRemoteDocumen
 
 /**
  * @method static string get(string $repository, string $file = 'README.md')
+ * @method static string parse(string $markdown)
  *
  * @see \Veiliglanceren\LaravelRemoteDocumentation\Services\IRemoteDocumentationService
  */

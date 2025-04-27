@@ -70,14 +70,14 @@ You can then edit `resources/views/vendor/remote-documentation/layout.blade.php`
 
 ---
 
-## 🛠 Available Services
+## 🛠 Available functions
 
-You can use services manually if needed:
+The following functions are available through the `RemoteDocumentation` facade.
 
-| Service | Purpose |
-|:---|:---|
+| Service                                  | Purpose |
+|:-----------------------------------------|:---|
 | `RemoteDocumentation::get($repo, $file)` | Fetch and parse remote Markdown |
-| `FileGenerateService::generate($repo, $file)` | Generate a Blade view file |
+| `RemoteDocumentation::parse($markdown)`  | Generate a Blade view file |
 
 All services are fully extensible and injectable for advanced use cases.
 
