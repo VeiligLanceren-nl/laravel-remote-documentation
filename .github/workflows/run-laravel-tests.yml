@@ -29,10 +29,16 @@ jobs:
           tools: composer:v2
           coverage: none
 
+      # If Laravel 10 is being tested, we lock Pest and Pest Plugin to 2.x series.
+      # Otherwise, Laravel 11+ will use Pest 3.x automatically.
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
-          composer update --prefer-dist --no-interaction
+          composer require "laravel/framework:${{ matrix.laravel }}" --no-update --no-interaction
+          if [[ "${{ matrix.laravel }}" == "10.*" ]]; then
+            composer require "pestphp/pest:^2.0" "pestphp/pest-plugin-laravel:^2.0" --no-update --no-interaction
+          fi
+          composer update --prefer-dist --no-interaction --with-all-dependencies
+      
 
       - name: Run Pest tests
         run: ./vendor/bin/pest
