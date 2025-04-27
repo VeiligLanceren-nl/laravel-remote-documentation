@@ -2,12 +2,22 @@
 
 use Veiliglanceren\LaravelRemoteDocumentation\Services\GithubService;
 
+it('can fetch default README.md', function () {
+    /** @var GithubService $githubService */
+    $githubService = app(GithubService::class);
+    $remoteContent = $githubService->fetch('VeiligLanceren-nl/laravel-remote-documentation');
+
+    expect(normalizeLineEndings($remoteContent))
+        ->not()
+        ->toBeEmpty();;
+});
+
 it('fetches the correct README content from GitHub', function () {
     /** @var GithubService $githubService */
     $githubService = app(GithubService::class);
-    $remoteContent = $githubService->fetch('VeiligLanceren-nl/laravel-remote-documentation', 'README.md');
+    $remoteContent = $githubService->fetch('VeiligLanceren-nl/laravel-remote-documentation', '/tests/README.md');
     $packageRoot = dirname(__DIR__, 2);
-    $localReadmePath = $packageRoot . '/README.md';
+    $localReadmePath = $packageRoot . '/tests/README.md';
 
     if (!file_exists($localReadmePath)) {
         throw new Exception('Local README.md not found at ' . $localReadmePath);
