@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use VeiligLanceren\GithubFile\GithubFileServiceProvider;
 use Veiliglanceren\LaravelRemoteDocumentation\DocumentationServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
@@ -15,6 +16,7 @@ abstract class TestCase extends OrchestraTestCase
     {
         return [
             DocumentationServiceProvider::class,
+            GithubFileServiceProvider::class,
         ];
     }
 }
