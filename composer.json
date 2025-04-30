@@ -3,6 +3,8 @@
     "description": "Easily fetch, parse, and display remote Markdown documentation from GitHub (or other sources) directly into customizable Blade views in your Laravel application.",
     "type": "library",
     "version": "1.0.0",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "php": "^8.1",
         "laravel/framework": "^10.0|^11.0|^12.0",
